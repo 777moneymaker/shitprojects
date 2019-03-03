@@ -94,7 +94,7 @@ void quickSort(int arr[], int left, int right) {
             i++;
             j--;
         }
-    };
+    }
     if (left < j)
         quickSort(arr, left, j);
     if (i < right)
@@ -102,48 +102,429 @@ void quickSort(int arr[], int left, int right) {
 }
 
 int main(){
+
     int size;
-    cout<< "Array size: " << endl; cin >> size; int *array = new int[size];
+    cout<< "Array size: " << endl; cin >> size;
+    int *randarray= new int[size];
+    int *ascarray= new int[size];
+    int *descarray= new int[size];
+    int *staticarray= new int[size];
+    int *adarray = new int[size];
 
     srand((unsigned)time(0));
     cout<<"Random array: ";
-
     for(int i=0; i<size; i++){
-        array[i] = (rand()%100)+1;
-        cout << array[i] <<" ";
+        randarray[i] = (rand()%100)+1;
+        cout << randarray[i] <<" ";
         }
 
+    cout<<"\n\nAscending array: "<<endl;
+    for(int i=0;i<size;i++){ //ascending array
+      ascarray[i] = (i*size)- 2;
+      cout<<ascarray[i]<<" ";
+    }
 
-  clock_t time = clock(); //init time
-  insertionSort(array,size);
-  time = clock() - time; //diff time
+    cout<<"\n\nDescending array: "<<endl;
+    for(int i=0;i<size;i++){
+      descarray[i]= (size-i)*3 ;
+      cout<<descarray[i]<<" ";
+    }
 
-  double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-
-  cout<<"\n\nInsertion sort time (ms): "<<ms<<endl;
-  cout<<"After insertion sort array: ";
-  for(int i=0;i<size;i++) // printing array
-    cout<<array[i]<<" ";
-
-  cout<<"\n\nAscending array: "<<endl;
-  for(int i=0;i<size;i++){ //ascending array
-      array[i] = (i*size)- 2;
-      cout<<array[i]<<" ";
-  }
-
-  cout<<"\n\nDescending array: "<<endl;
-  for(int i=0;i<size;i++){
-      array[i]= (size-i)*3 ;
-      cout<<array[i]<<" ";
-  }
-
-  cout<<"\n\n Asc-Desc array: "<<endl;
-  for(int i=0;i<size;i++){
-      array[i]=(size*2)+i;
+    cout<<"\n\nStatic array: "<<endl;
+    for(int i=0;i<size;i++){
+      staticarray[i]=size;
+      cout<<staticarray[i]<<" ";
+    }
+    cout<<"\n\n Asc-Desc array: "<<endl;
+    for(int i=0;i<size;i++){
+      adarray[i]=(size*2)+i;
       if(i>=(size/2)){
-          array[i]=(size*2)-i;
+          adarray[i]=(size*2)-i;
       }
-      cout<<array[i]<<" ";
-  }
-  return 0;
+      cout<<adarray[i]<<" ";
+    }
+
+    char choice; cout<<"\n\nWhich sorting? ( 1- Insertion, 2 - Shell, 3 - Selection, 4 - Heap, 5 - Quick)"<<endl;
+    cin>>choice;
+    switch(choice){
+        case '1':{
+            cout<<"\nWhich array?(\"R\" - random, \"A\" - ascending, \"D\" - descending, \"S\" - static, \"X\" - Ascending-descending"<<endl;
+            char choice2;
+            cin>>choice2;
+            if(choice2== 'R'){
+                clock_t time = clock(); //init time
+
+                insertionSort(randarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<randarray[i]<<" ";
+                }
+
+            }
+            else if(choice2== 'A'){
+                clock_t time = clock(); //init time
+
+                insertionSort(ascarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<ascarray[i]<<" ";
+                }
+            }
+            else if(choice2=='D'){
+                clock_t time = clock(); //init time
+
+                insertionSort(descarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<descarray[i]<<" ";
+                }
+            }
+            else if(choice2=='S'){
+                clock_t time = clock(); //init time
+
+                insertionSort(staticarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<staticarray[i]<<" ";
+                }
+            }
+            else if(choice2=='X'){
+                clock_t time = clock(); //init time
+
+                insertionSort(adarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<adarray[i]<<" ";
+                }
+            }
+            else{
+                cout<<"Error";
+            }
+            break;
+        }
+        case '2':{
+            cout<<"\nWhich array?(\"R\" - random, \"A\" - ascending, \"D\" - descending, \"S\" - static, \"X\" - Ascending-descending"<<endl;
+            char choice2;
+            cin>>choice2;
+            if(choice2== 'R'){
+                clock_t time = clock(); //init time
+
+                shellSort(randarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<randarray[i]<<" ";
+                }
+
+            }
+            else if(choice2== 'A'){
+                clock_t time = clock(); //init time
+
+                shellSort(ascarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<ascarray[i]<<" ";
+                }
+            }
+            else if(choice2=='D'){
+                clock_t time = clock(); //init time
+
+                shellSort(descarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<descarray[i]<<" ";
+                }
+            }
+            else if(choice2=='S'){
+                clock_t time = clock(); //init time
+
+                shellSort(staticarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<staticarray[i]<<" ";
+                }
+            }
+            else if(choice2=='X'){
+                clock_t time = clock(); //init time
+
+                shellSort(adarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<adarray[i]<<" ";
+                }
+            }
+            else{
+                cout<<"Error";
+            }
+            break;
+        }
+        case '3':{
+            cout<<"\nWhich array?(\"R\" - random, \"A\" - ascending, \"D\" - descending, \"S\" - static, \"X\" - Ascending-descending"<<endl;
+            char choice2;
+            cin>>choice2;
+            if(choice2== 'R'){
+                clock_t time = clock(); //init time
+
+                selectionSort(randarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<randarray[i]<<" ";
+                }
+
+            }
+            else if(choice2== 'A'){
+                clock_t time = clock(); //init time
+
+                selectionSort(ascarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<ascarray[i]<<" ";
+                }
+            }
+            else if(choice2=='D'){
+                clock_t time = clock(); //init time
+
+                selectionSort(descarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<descarray[i]<<" ";
+                }
+            }
+            else if(choice2=='S'){
+                clock_t time = clock(); //init time
+
+                selectionSort(staticarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<staticarray[i]<<" ";
+                }
+            }
+            else if(choice2=='X'){
+                clock_t time = clock(); //init time
+
+                selectionSort(adarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<adarray[i]<<" ";
+                }
+            }
+            else{
+                cout<<"Error";
+            }
+            break;
+        }
+        case '4':{
+            cout<<"\nWhich array?(\"R\" - random, \"A\" - ascending, \"D\" - descending, \"S\" - static, \"X\" - Ascending-descending"<<endl;
+            char choice2;
+            cin>>choice2;
+            if(choice2== 'R'){
+                clock_t time = clock(); //init time
+
+                heapSort(randarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<randarray[i]<<" ";
+                }
+
+            }
+            else if(choice2== 'A'){
+                clock_t time = clock(); //init time
+
+                insertionSort(ascarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<ascarray[i]<<" ";
+                }
+            }
+            else if(choice2=='D'){
+                clock_t time = clock(); //init time
+
+                heapSort(descarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<descarray[i]<<" ";
+                }
+            }
+            else if(choice2=='S'){
+                clock_t time = clock(); //init time
+
+                heapSort(staticarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<staticarray[i]<<" ";
+                }
+            }
+            else if(choice2=='X'){
+                clock_t time = clock(); //init time
+
+                heapSort(adarray,size);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<adarray[i]<<" ";
+                }
+            }
+            else{
+                cout<<"Error";
+            }
+            break;
+        }
+        case '5':{
+            cout<<"\nWhich array?(\"R\" - random, \"A\" - ascending, \"D\" - descending, \"S\" - static, \"X\" - Ascending-descending"<<endl;
+            char choice2;
+            cin>>choice2;
+            if(choice2== 'R'){
+                clock_t time = clock(); //init time
+
+                quickSort(randarray,0,size-1);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<randarray[i]<<" ";
+                }
+
+            }
+            else if(choice2== 'A'){
+                clock_t time = clock(); //init time
+
+                quickSort(ascarray,0,size-1);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<ascarray[i]<<" ";
+                }
+            }
+            else if(choice2=='D'){
+                clock_t time = clock(); //init time
+
+                quickSort(descarray,0,size-1);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<descarray[i]<<" ";
+                }
+            }
+            else if(choice2=='S'){
+                clock_t time = clock(); //init time
+
+                quickSort(staticarray,0,size-1);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<staticarray[i]<<" ";
+                }
+            }
+            else if(choice2=='X'){
+                clock_t time = clock(); //init time
+
+                quickSort(adarray,0,size-1);
+
+                time = clock() - time; //diff time
+                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
+                cout<<"Time in ms: "<<ms<<endl;
+                cout<<"After sorting: "<<endl;
+                for(int i=0;i<size;i++){
+                    cout<<adarray[i]<<" ";
+                }
+            }
+            else{
+                cout<<"Error";
+            }
+            break;
+        }
+
+    }
+
+    return 0;
+
 }
