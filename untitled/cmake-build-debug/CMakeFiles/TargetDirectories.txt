@@ -1,3 +1,0 @@
-/home/moneymaker/Desktop/Projects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/moneymaker/Desktop/Projects/untitled/cmake-build-debug/CMakeFiles/untitled.dir
-/home/moneymaker/Desktop/Projects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -8,86 +8,82 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/moneymaker/Desktop/Projects/cmake-build-debug"/>
+				<Option working_dir="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/moneymaker/Desktop/Projects/cmake-build-debug"/>
+				<Option working_dir="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Projects">
-				<Option output="/home/moneymaker/Desktop/Projects/cmake-build-debug/Projects" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/moneymaker/Desktop/Projects/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projects"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Projects/fast">
-				<Option output="/home/moneymaker/Desktop/Projects/cmake-build-debug/Projects" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/moneymaker/Desktop/Projects/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projects/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/moneymaker/Desktop/Projects/cmake-build-debug"/>
+				<Option working_dir="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/moneymaker/Desktop/Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Projects">
+				<Option output="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Projects" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projects"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Projects/fast">
+				<Option output="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Projects" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projects/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/moneymaker/Desktop/Projects/main.cpp">
+		<Unit filename="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/main.cpp">
 			<Option target="Projects"/>
 		</Unit>
-		<Unit filename="/home/moneymaker/Desktop/Projects/CMakeLists.txt">
+		<Unit filename="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
