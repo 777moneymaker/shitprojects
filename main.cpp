@@ -103,11 +103,9 @@ void quickSort(int arr[], int left, int right) {
 
 int main(){
     int size;
-    cout<< "Array size: " << endl;
-    cin >> size;
-    int *array = new int[size];
-    srand((unsigned)time(0));
+    cout<< "Array size: " << endl; cin >> size; int *array = new int[size];
 
+    srand((unsigned)time(0));
     cout<<"Random array: ";
 
     for(int i=0; i<size; i++){
@@ -120,15 +118,32 @@ int main(){
   insertionSort(array,size);
   time = clock() - time; //diff time
 
-  double ms = double(time)/CLOCKS_PER_SEC * 1000;
+  double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
 
-  cout<<"\nInsertion sort time: "<<ms<<endl;
+  cout<<"\n\nInsertion sort time (ms): "<<ms<<endl;
   cout<<"After insertion sort array: ";
   for(int i=0;i<size;i++) // printing array
     cout<<array[i]<<" ";
 
+  cout<<"\n\nAscending array: "<<endl;
+  for(int i=0;i<size;i++){ //ascending array
+      array[i] = (i*size)- 2;
+      cout<<array[i]<<" ";
+  }
 
+  cout<<"\n\nDescending array: "<<endl;
+  for(int i=0;i<size;i++){
+      array[i]= (size-i)*3 ;
+      cout<<array[i]<<" ";
+  }
 
-
+  cout<<"\n\n Asc-Desc array: "<<endl;
+  for(int i=0;i<size;i++){
+      array[i]=(size*2)+i;
+      if(i>=(size/2)){
+          array[i]=(size*2)-i;
+      }
+      cout<<array[i]<<" ";
+  }
   return 0;
 }
