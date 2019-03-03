@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -111,7 +111,9 @@ int main(){
     int *staticarray= new int[size];
     int *adarray = new int[size];
 
-    srand((unsigned)time(0));
+
+
+    srand((unsigned)time(NULL));
     cout<<"Random array: ";
     for(int i=0; i<size; i++){
         randarray[i] = (rand()%100)+1;
@@ -152,13 +154,13 @@ int main(){
             char choice2;
             cin>>choice2;
             if(choice2== 'R'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 insertionSort(randarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<randarray[i]<<" ";
@@ -166,52 +168,48 @@ int main(){
 
             }
             else if(choice2== 'A'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 insertionSort(ascarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<ascarray[i]<<" ";
                 }
             }
             else if(choice2=='D'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 insertionSort(descarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<descarray[i]<<" ";
                 }
             }
             else if(choice2=='S'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 insertionSort(staticarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<staticarray[i]<<" ";
                 }
             }
             else if(choice2=='X'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 insertionSort(adarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<adarray[i]<<" ";
@@ -227,13 +225,12 @@ int main(){
             char choice2;
             cin>>choice2;
             if(choice2== 'R'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 shellSort(randarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<randarray[i]<<" ";
@@ -241,52 +238,48 @@ int main(){
 
             }
             else if(choice2== 'A'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 shellSort(ascarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<ascarray[i]<<" ";
                 }
             }
             else if(choice2=='D'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 shellSort(descarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<descarray[i]<<" ";
                 }
             }
             else if(choice2=='S'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 shellSort(staticarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<staticarray[i]<<" ";
                 }
             }
             else if(choice2=='X'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 shellSort(adarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<adarray[i]<<" ";
@@ -302,13 +295,12 @@ int main(){
             char choice2;
             cin>>choice2;
             if(choice2== 'R'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 selectionSort(randarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<randarray[i]<<" ";
@@ -316,52 +308,48 @@ int main(){
 
             }
             else if(choice2== 'A'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 selectionSort(ascarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<ascarray[i]<<" ";
                 }
             }
             else if(choice2=='D'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 selectionSort(descarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<descarray[i]<<" ";
                 }
             }
             else if(choice2=='S'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 selectionSort(staticarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<staticarray[i]<<" ";
                 }
             }
             else if(choice2=='X'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 selectionSort(adarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<adarray[i]<<" ";
@@ -377,13 +365,12 @@ int main(){
             char choice2;
             cin>>choice2;
             if(choice2== 'R'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 heapSort(randarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in ns: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<randarray[i]<<" ";
@@ -391,52 +378,48 @@ int main(){
 
             }
             else if(choice2== 'A'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 heapSort(ascarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<ascarray[i]<<" ";
                 }
             }
             else if(choice2=='D'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 heapSort(descarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<descarray[i]<<" ";
                 }
             }
             else if(choice2=='S'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 heapSort(staticarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<staticarray[i]<<" ";
                 }
             }
             else if(choice2=='X'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 heapSort(adarray,size);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<adarray[i]<<" ";
@@ -452,13 +435,13 @@ int main(){
             char choice2;
             cin>>choice2;
             if(choice2== 'R'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 quickSort(randarray,0,size-1);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC*1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+
+                cout<<"Time in nanoseconds: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<randarray[i]<<" ";
@@ -466,52 +449,48 @@ int main(){
 
             }
             else if(choice2== 'A'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 quickSort(ascarray,0,size-1);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in ns: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<ascarray[i]<<" ";
                 }
             }
             else if(choice2=='D'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 quickSort(descarray,0,size-1);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in ns: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<descarray[i]<<" ";
                 }
             }
             else if(choice2=='S'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 quickSort(staticarray,0,size-1);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in ns: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<staticarray[i]<<" ";
                 }
             }
             else if(choice2=='X'){
-                clock_t time = clock(); //init time
-
+                auto start = std::chrono::high_resolution_clock::now();
                 quickSort(adarray,0,size-1);
+                auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
-                time = clock() - time; //diff time
-                double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
-                cout<<"Time in ms: "<<ms<<endl;
+                long long ns = std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
+                cout<<"Time in ns: "<<ns<<endl;
                 cout<<"After sorting: "<<endl;
                 for(int i=0;i<size;i++){
                     cout<<adarray[i]<<" ";
