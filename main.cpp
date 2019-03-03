@@ -393,7 +393,7 @@ int main(){
             else if(choice2== 'A'){
                 clock_t time = clock(); //init time
 
-                insertionSort(ascarray,size);
+                heapSort(ascarray,size);
 
                 time = clock() - time; //diff time
                 double ms = double(time)/CLOCKS_PER_SEC * 1000; // final time
