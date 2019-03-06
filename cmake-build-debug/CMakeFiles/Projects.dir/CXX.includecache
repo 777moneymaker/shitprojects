@@ -9,8 +9,8 @@
 /Users/777moneymaker/Desktop/palgorytmy/shitprojects/main.cpp
 iostream
 -
-chrono
+cstdlib
 -
-stdlib.h
+chrono
 -
 

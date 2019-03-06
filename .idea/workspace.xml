@@ -37,8 +37,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="557">
+              <caret line="504" column="22" lean-forward="true" selection-start-line="504" selection-start-column="22" selection-end-line="504" selection-end-column="22" />
+              <folding>
+                <element signature="e#327#346#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,8 +80,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,18 +129,19 @@
       <workItem from="1551620118006" duration="4250000" />
       <workItem from="1551862076690" duration="3356000" />
       <workItem from="1551893130688" duration="1277000" />
-      <workItem from="1551895032057" duration="19000" />
+      <workItem from="1551895032057" duration="55000" />
+      <workItem from="1551897468240" duration="317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18268000" />
+    <option name="totallyTimeSpent" value="18621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13805436" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13948497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -174,8 +178,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        <state relative-caret-position="557">
+          <caret line="504" column="22" lean-forward="true" selection-start-line="504" selection-start-column="22" selection-end-line="504" selection-end-column="22" />
+          <folding>
+            <element signature="e#327#346#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

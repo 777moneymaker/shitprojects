@@ -7,8 +7,8 @@
     to sort the array. */
 
 #include <iostream>
+#include <cstdlib>
 #include <chrono>
-#include<stdlib.h>
 
 using namespace std;
 
@@ -157,7 +157,7 @@ int main() {
         }
 
         char choice;
-        cout << "\n\nWhich sorting? [1 - Insertion, 2 - Shell, 3 - Selection, 4 - Heap, 5 - Quick]" << endl;
+        cout << "\n\nWhich sorting? [1 - Insertion, 2 - Shell, 3 - Selection, 4 - Heap, 5 - Quick, X - Exit() ]" << endl;
         cin >> choice;
         switch (choice) {
             case '1': {
@@ -497,7 +497,13 @@ int main() {
                 }
                 break;
             }
-
+            case 'X':{
+                exit(0);
+            }
+            default: {
+                cout << "Error" << endl;
+                break;
+            }
         }
 
     }
