@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/Users/777moneymaker/Desktop/palgorytmy/shitprojects/Sorts.h
+
 /Users/777moneymaker/Desktop/palgorytmy/shitprojects/main.cpp
 iostream
 -
@@ -13,4 +15,6 @@ cstdlib
 -
 chrono
 -
+Sorts.h
+/Users/777moneymaker/Desktop/palgorytmy/shitprojects/Sorts.h
 

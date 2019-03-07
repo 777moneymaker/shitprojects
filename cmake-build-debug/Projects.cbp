@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/cmake-build-debug/Sorts.h">
+			<Option target="Projects"/>
+		</Unit>
 		<Unit filename="/Users/777moneymaker/Desktop/palgorytmy/shitprojects/main.cpp">
 			<Option target="Projects"/>
 		</Unit>
